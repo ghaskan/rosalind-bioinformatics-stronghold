@@ -11,7 +11,7 @@ for nt in dna_string:
     # ignore blank results
     if nt == '':
         continue
-    # check which nt we're dealing with
+    # check which nt we're dealing with and complement it
     if nt == 'A':
         nt = nt.replace('A', 'T')
     elif nt == 'T':
@@ -20,7 +20,7 @@ for nt in dna_string:
         nt = nt.replace('G', 'C')
     elif nt == 'C':
         nt = nt.replace('C', 'G')
-    # add obtained complement nt
+    # add obtained nt
     dna_complement += nt
 
 reverse_complement = dna_complement[::-1] # reverse by using extended slice
