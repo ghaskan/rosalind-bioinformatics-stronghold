@@ -1,5 +1,9 @@
 def hamming(seq1, seq2):
 
+"""
+Determines the Hamming Distance between two given DNA sequences.
+"""
+
     diff_count = 0
 
     for i in range(len(seq1)):
