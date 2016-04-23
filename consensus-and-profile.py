@@ -48,8 +48,10 @@ def list_sequences(filepath):
 
     with open(filepath, 'r') as f:
 
-        fasta_list = parse_fasta(filepath # let our previous function do the parsing work
-        seq_list = [fasta_list[key] for key in fasta_list.keys()] # create a list where each sequence is an item
+        # let our previous function do the parsing work
+        fasta_list = parse_fasta(filepath)
+        # create a list where each sequence is an item
+        seq_list = [fasta_list[key] for key in fasta_list.keys()]
 
     return seq_list
 
@@ -130,7 +132,7 @@ def find_consensus(filepath):
 
 def consensus(input_filepath, output_filepath):
     """
-    Builds a prettier output to display the result of the work of all previous functions, and, most importantly, is the 
+    Builds a prettier output to display the result of the work of all previous functions, and, most importantly, is the
     only function that needs to be called.
     """
 
